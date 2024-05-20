@@ -17,9 +17,10 @@
     />
 
     <!-- Stylesheets -->
-    <link href="common-css/bootstrap.css" rel="stylesheet" />
-
-    <link href="common-css/ionicons.css" rel="stylesheet" />
+    <link href="css/bootstrap.css" rel="stylesheet" />
+    <link href="css/ionicons.css" rel="stylesheet" />
+    <link href="css/styles.css" rel="stylesheet" />
+    <link href="css/responsive.css" rel="stylesheet" />
 
     <!-- REVOLUTION STYLE SHEETS -->
     <link rel="stylesheet" type="text/css" href="revolution/css/settings.css" />
@@ -33,10 +34,6 @@
       type="text/javascript"
       src="revolution/js/jquery.themepunch.revolution.min.js"
     ></script>
-
-    <link href="01_Photography/css/styles.css" rel="stylesheet" />
-
-    <link href="01_Photography/css/responsive.css" rel="stylesheet" />
   </head>
   <body>
     <header>
@@ -47,18 +44,18 @@
       ></a>
 
       <ul class="main-menu korean" id="main-menu">
-        <li><a href="#">장바구니</a></li>
+        <li><a href="./screens/cart.html">장바구니</a></li>
         <li><a href="#">내정보</a></li>
         <li><a href="#">로그아웃</a></li>
-        <li><a href="#">회원가입</a></li>
-        <li><a href="#">로그인</a></li>
+        <li><a href="./screens/register.html">회원가입</a></li>
+        <li><a href="./screens/login.html">로그인</a></li>
       </ul>
     </header>
 
     <section class="slider-section">
       <div
         id="rev_slider_28_1_wrapper"
-        class="rev_slider_wrapper fullscreen-container"
+        class="rev_slider_wrapper halfscreen-container"
         data-alias="parallax-zoom-slices"
         data-source="gallery"
         style="background: #000000; padding: 0px"
@@ -555,6 +552,14 @@
       </div>
       <!-- END REVOLUTION SLIDER -->
     </section>
+    <div class="col-12 mt-4 text-center">
+      <input
+        type="text"
+        name="email"
+        class="w-50 stylish-input"
+        placeholder="원하는 책을 검색하세요"
+      />
+    </div>
     <!-- slider -->
 
     <footer>
@@ -598,11 +603,11 @@
 
     <!-- SCIPTS -->
 
-    <script src="common-js/jquery-3.2.1.min.js"></script>
+    <script src="js/jquery-3.2.1.min.js"></script>
 
-    <script src="common-js/tether.min.js"></script>
+    <script src="js/tether.min.js"></script>
 
-    <script src="common-js/bootstrap.js"></script>
+    <script src="js/bootstrap.js"></script>
 
     <!-- REVOLUTION JS FILES -->
     <script
@@ -652,6 +657,6 @@
       src="revolution/js/extensions/revolution.extension.video.min.js"
     ></script>
 
-    <script src="common-js/scripts.js"></script>
+    <script src="js/scripts.js"></script>
   </body>
 </html>
