@@ -1,15 +1,6 @@
 /*
 ====================================================
 
-* 	[Master Stylesheet]
-	
-	Theme Name :  
-	Version    :  
-	Author     :  
-	Author URI :  
-
-====================================================
-
 	TOC
 	
 	1. PRIMARY STYLES
@@ -219,6 +210,10 @@ b.max-bold {
   font-optical-sizing: auto;
 }
 
+.text-outline-black-1 {
+  text-shadow: -1px 0px black, 0px 1px black, 1px 0px black, 0px -1px black;
+}
+
 .black-btn {
   background: #000;
   color: white;
@@ -409,8 +404,75 @@ header .main-menu li.drop-down a.mouseover + ul.drop-down-menu {
   width: auto;
 }
 
+.books-container-image {
+  border-radius: 0.25rem;
+  background-color: #000000;
+  border: 1px solid #000000;
+  width: 60%;
+}
+
 /* ---------------------------------
-6. CART
+6. MAIN
+--------------------------------- */
+
+.slide-anime-button {
+  display: inline-block;
+  border-radius: 4px;
+  background-color: #777;
+  border: none;
+  color: #ffffff;
+  text-align: center;
+  font-size: 28px;
+  padding: 20px;
+  width: 200px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.slide-anime-button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.slide-anime-button span:after {
+  content: "\00bb";
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.slide-anime-button:hover span {
+  padding-right: 25px;
+}
+
+.slide-anime-button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+.books-container {
+  width: 20%;
+  height: auto;
+  padding: 10px;
+  border: 2px solid #000;
+}
+
+.heart-btn {
+  background: #000;
+  color: white;
+  padding: 10px;
+  width: 100%;
+  height: auto;
+  font-size: 60%;
+}
+
+/* ---------------------------------
+7. CART
 --------------------------------- */
 .cart-checkbox {
   width: 30px;
@@ -439,7 +501,7 @@ header .main-menu li.drop-down a.mouseover + ul.drop-down-menu {
 }
 
 /* ---------------------------------
-7. ORDER
+8. ORDER
 --------------------------------- */
 .pay-container {
   height: 500px;
@@ -448,7 +510,7 @@ header .main-menu li.drop-down a.mouseover + ul.drop-down-menu {
 }
 
 /* ---------------------------------
-8. ORDER_LISTS
+9. ORDER_LISTS
 --------------------------------- */
 .black-outline-containers {
   height: auto;
@@ -465,7 +527,7 @@ header .main-menu li.drop-down a.mouseover + ul.drop-down-menu {
 }
 
 /* ---------------------------------
-9. USER_INFO
+10. USER_INFO
 --------------------------------- */
 .stylish-input {
   border-top: 0;
@@ -475,67 +537,19 @@ header .main-menu li.drop-down a.mouseover + ul.drop-down-menu {
 }
 
 /* ---------------------------------
-10. FOOTER
+11. FOOTER
 --------------------------------- */
 
 footer {
-  position: absolute;
   bottom: 0;
   left: 0;
   right: 0;
   overflow: hidden;
   z-index: 10000;
-  text-align: center;
 }
 
 footer .copyright {
   font-size: 0.95em;
   line-height: 60px;
   left: 0;
-  position: absolute;
-}
-
-footer .show-thumb-btn {
-  height: 30px;
-  line-height: 30px;
-  margin: 15px 0;
-  position: relative;
-}
-
-footer .show-thumb-btn:after {
-  content: "";
-  position: absolute;
-  bottom: 3px;
-  top: 3px;
-  left: -2px;
-  right: -2px;
-  z-index: -1;
-  background: #aaa;
-  -webkit-transform-origin: bottom;
-  transform-origin: bottom;
-  -webkit-transform: scaleY(0.15);
-  transform: scaleY(0.15);
-  -webkit-transition: all 0.2s ease;
-  transition: all 0.2s ease;
-}
-
-footer .show-thumb-btn:hover {
-  color: #fff;
-}
-footer .show-thumb-btn:hover:after {
-  background: #333;
-  -webkit-transform: scaleY(1);
-  transform: scaleY(1);
-}
-
-footer .social-icons {
-  position: absolute;
-  right: 0;
-  top: 0;
-}
-
-footer .social-icons > li > a {
-  height: 60px;
-  line-height: 60px;
-  margin-left: 20px;
 }
