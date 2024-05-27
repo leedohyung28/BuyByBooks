@@ -11,7 +11,7 @@ const {
   login,
   pwreset,
   pwchange,
-} = require("../controllers/UserControllers");
+} = require("../controllers/UserController");
 
 const validate = (req, res, next) => {
   const err = validationResult(req);

@@ -7,7 +7,7 @@ router.use(express.json());
 const {
   selectBooks,
   selectSingleBook,
-} = require("../controllers/BooksControllers");
+} = require("../controllers/BooksController");
 
 const validate = (req, res, next) => {
   const err = validationResult(req);
@@ -27,22 +27,11 @@ router.get("/", selectBooks);
 router.get(
   "/:book_id",
   [
+    body("reader_id").notEmpty().withMessage("사용자 ID가 필요합니다."),
     param("book_id").notEmpty().isInt().withMessage("책 ID가 필요합니다."),
     validate,
   ],
   selectSingleBook
 );
-
-// router.get(
-//   "/category_id=:category_id",
-//   [
-//     param("category_id")
-//       .notEmpty()
-//       .isInt()
-//       .withMessage("카테고리 ID가 필요합니다."),
-//     validate,
-//   ],
-//   selectBooksByCategory
-// );
 
 module.exports = router;
