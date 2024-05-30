@@ -50,7 +50,6 @@ const payment = async (req, res) => {
   orderItems.forEach((item) =>
     values.push([order_id, item.book_id, item.quantity])
   );
-
   results = await conn.query(sql, [values]);
 
   let result = await deleteCartItems(conn, items);
@@ -83,7 +82,7 @@ const getAllOrders = async (req, res) => {
 };
 
 const getDetailOrders = async (req, res) => {
-  let { id } = req.params;
+  let { orderId } = req.params;
   const conn = await mariadb.createConnection({
     host: "localhost",
     user: "root",
@@ -97,7 +96,7 @@ const getDetailOrders = async (req, res) => {
               LEFT JOIN books
               ON orderedBook.book_id = books.id
               WHERE order_id=?`;
-  let [rows, fields] = await conn.query(sql, [id]);
+  let [rows, fields] = await conn.query(sql, [orderId]);
   return res.status(StatusCodes.OK).json(rows);
 };
 
